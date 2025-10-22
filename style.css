@@ -217,6 +217,20 @@ nav ul li a:hover, nav ul li.active a {
     color: white;
     text-shadow: 0 3px 6px rgba(0,0,0,0.7);
     padding: 120px 0;
+    min-height: 100vh; /* لضمان أن القسم يملأ على الأقل ارتفاع الشاشة */
+    display: flex; /* لتفعيل الـ flexbox */
+    align-items: center; /* لتوسيط المحتوى عمودياً */
+    justify-content: center; /* لتوسيط المحتوى أفقياً */
+    text-align: center;
+}
+#hero .container {
+    padding: 20px 25px; /* تباعد بسيط داخل الكونتينر */
+}
+
+
+/* تعديل الهامش السفلي لزر الـ Hero لرفعه عن الأزرار العائمة */
+#hero .btn {
+    margin-bottom: 70px; /* هامش سفلي كبير لضمان عدم تداخل الزر مع الـ Floating Buttons */
 }
 #hero h1 {
     color: #FFC300; 
@@ -365,26 +379,84 @@ nav ul li a:hover, nav ul li.active a {
     font-size: 1.1em;
 }
 
-/* Contact Section */
+//* Contact Section */
+#contact .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* تغيير ترتيب الأعمدة: معلومات الاتصال على اليسار، النموذج على اليمين */
+    gap: 60px; 
+    margin-top: 50px;
+}
+#contact .contact-info {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: right; /* محاذاة كل النص لليمين */
+}
+#contact .contact-info h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #003366; /* أزرق كحلي */
+    text-align: right; /* العنوان محاذ لليمين */
+}
+#contact .contact-info p {
+    margin-bottom: 18px;
+    font-size: 1.1em;
+    color: #555;
+    display: flex; /* لضمان أن الأيقونة والنص يكونان على نفس السطر */
+    align-items: center; /* لمحاذاة العناصر عمودياً */
+}
 #contact .contact-info p i {
-    color: #FFC300;
+    margin-left: 12px;
+    color: #FFC300; /* ذهبي */
+    font-size: 1.2em;
+    flex-shrink: 0; /* منع الأيقونة من الانكماش */
+}
+
+/* تنسيق روابط البريد والهاتف داخل معلومات الاتصال */
+#contact .contact-info p a {
+    color: #003366; /* جعل الروابط النصية داخل المعلومات باللون الأزرق الداكن */
+    text-decoration: none;
+    font-weight: 600;
+}
+#contact .contact-info p a:hover {
+    color: #FFC300; /* تغيير اللون للذهبي عند التمرير */
+    text-decoration: underline;
+}
+
+#contact .social-links-contact {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px; 
+    /* تم إزالة محاذاة المركز هنا لاتباع محاذاة اليمين */
 }
 #contact .social-links-contact a {
+    font-size: 2em; 
     color: #003366;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 #contact .social-links-contact a:hover {
     color: #FFC300;
+    text-decoration: none;
+    transform: translateY(-5px);
 }
-.form-group input:focus, .form-group textarea:focus {
-    border-color: #FFC300;
-    box-shadow: 0 0 0 3px rgba(255,195,0,0.25);
+
+/* تنسيق نموذج الاتصال (Contact Form) */
+#contact .contact-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: right;
 }
-.btn-submit {
-    background-color: #003366;
+#contact .contact-form h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #003366;
+    text-align: center; /* توسيط عنوان النموذج */
 }
-.btn-submit:hover {
-    background-color: #002244;
-}
+
+/* ... (باقي تنسيقات النموذج كما هي) ... */
 
 /* Footer */
 footer {
