@@ -5,10 +5,12 @@ body {
     padding: 0;
     direction: rtl;
     text-align: right;
-    background-color: #f4f7f9; /* خلفية فاتحة جداً */
+    background-color: #f4f7f9;
     color: #333;
     line-height: 1.7;
     transition: background-color 0.3s ease;
+    /* إضافة هذا السطر لحل مشكلة الفراغ الأفقي */
+    overflow-x: hidden; 
 }
 
 /* **السطر السحري لضمان النعومة في الانتقال** */
@@ -379,7 +381,7 @@ nav ul li a:hover, nav ul li.active a {
     font-size: 1.1em;
 }
 
-//* Contact Section */
+/* Contact Section */
 #contact .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr; /* تغيير ترتيب الأعمدة: معلومات الاتصال على اليسار، النموذج على اليمين */
@@ -481,7 +483,9 @@ footer a {
 .fixed-contact-buttons {
     position: fixed;
     bottom: 30px;
-    left: 30px;
+    /* التعديل هنا: إزالة left ووضع right لضمان أنها على يسار المحتوى (كما في الصورة) */
+    right: 30px; 
+    left: auto; /* التأكد من أن خاصية left ليست مضافة */
     z-index: 1001;
     display: flex;
     flex-direction: column;
