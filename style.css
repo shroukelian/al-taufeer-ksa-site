@@ -9,11 +9,14 @@ body {
     color: #333;
     line-height: 1.7;
     transition: background-color 0.3s ease;
+     overflow-x: hidden; 
+    
 }
 
 /* **السطر السحري لضمان النعومة في الانتقال** */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 /* ------------------------------------------- */
 
@@ -587,6 +590,11 @@ footer a {
     }
 
     /* --- Hero Section Mobile Adjustments --- */
+    #hero {
+        background-size: cover;
+        background-position: 80% center; /* تعديل موضع الخلفية لإظهار الشاحنة بشكل أفضل */
+    }
+
     #hero h1 {
         font-size: 3em;
     }
@@ -596,6 +604,30 @@ footer a {
     }
     #hero .btn {
         margin-bottom: 50px; 
+    }
+    /* إصلاح ظهور القائمة الجانبية */
+    .main-nav-wrapper {
+        flex-direction: column; 
+        width: 100%; /* تأخذ العرض الكامل */
+        position: absolute; 
+        top: 95px; 
+        /* موضع الإخفاء الافتراضي: خارج الشاشة على اليسار (في RTL) */
+        right: 0; 
+        
+        background-color: #003366; 
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        max-height: 0; 
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        z-index: 999;
+        padding-bottom: 0; 
+        border-radius: 0 0 10px 10px;
+        margin-right: 0; 
+    }
+    
+    .main-nav-wrapper.active {
+        max-height: 500px; 
+        padding-bottom: 20px;
     }
 }
 @media (max-width: 768px) {
@@ -611,6 +643,10 @@ footer a {
     h1 { 
         font-size: 2.2em;
         line-height: 1.2;
+    }
+    .fixed-contact-buttons {
+        bottom: 15px; /* رفع الأزرار قليلاً عن حافة الشاشة */
+        left: 15px;
     }
     #hero p {
         font-size: 1.1em;
