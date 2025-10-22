@@ -5,12 +5,10 @@ body {
     padding: 0;
     direction: rtl;
     text-align: right;
-    background-color: #f4f7f9;
+    background-color: #f4f7f9; /* خلفية فاتحة جداً */
     color: #333;
     line-height: 1.7;
     transition: background-color 0.3s ease;
-    /* إضافة هذا السطر لحل مشكلة الفراغ الأفقي */
-    overflow-x: hidden; 
 }
 
 /* **السطر السحري لضمان النعومة في الانتقال** */
@@ -483,9 +481,7 @@ footer a {
 .fixed-contact-buttons {
     position: fixed;
     bottom: 30px;
-    /* التعديل هنا: إزالة left ووضع right لضمان أنها على يسار المحتوى (كما في الصورة) */
-    right: 30px; 
-    left: auto; /* التأكد من أن خاصية left ليست مضافة */
+    left: 30px;
     z-index: 1001;
     display: flex;
     flex-direction: column;
