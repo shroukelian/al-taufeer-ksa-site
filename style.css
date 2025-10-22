@@ -216,21 +216,17 @@ nav ul li a:hover, nav ul li.active a {
     background-position: center;
     color: white;
     text-shadow: 0 3px 6px rgba(0,0,0,0.7);
-    padding: 120px 0;
-    min-height: 100vh; /* لضمان أن القسم يملأ على الأقل ارتفاع الشاشة */
-    display: flex; /* لتفعيل الـ flexbox */
-    align-items: center; /* لتوسيط المحتوى عمودياً */
-    justify-content: center; /* لتوسيط المحتوى أفقياً */
-    text-align: center;
+    /* padding: 120px 0; */
+
 }
-#hero .container {
-    padding: 20px 25px; /* تباعد بسيط داخل الكونتينر */
-}
+/* #hero .container {
+    padding: 20px 25px;
+} */
 
 
 /* تعديل الهامش السفلي لزر الـ Hero لرفعه عن الأزرار العائمة */
 #hero .btn {
-    margin-bottom: 70px; /* هامش سفلي كبير لضمان عدم تداخل الزر مع الـ Floating Buttons */
+    margin-bottom: 70px;
 }
 #hero h1 {
     color: #FFC300; 
