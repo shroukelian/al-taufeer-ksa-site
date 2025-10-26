@@ -760,7 +760,7 @@ footer a {
         font-size: 0.95em;
     }
 
-    /* --- Hero Section Mobile Adjustments --- */
+    /* --- Hero Section  --- */
     #hero {
         background-size: cover;
         background-position: 80% center;
@@ -806,7 +806,7 @@ footer a {
     .contact-header {
         margin-right: 10px;
     }
-    /* --- About Section Mobile Fix --- */
+    /* --- About Section--- */
     #about .about-content {
         flex-direction: column; 
         align-items: center; 
@@ -873,7 +873,7 @@ footer a {
 }
 }
 @media (max-width: 576px) {
-    /* --- Hero Section Mobile Adjustments --- */
+    /* --- Hero Section  --- */
     .container {
         padding: 0 15px;
     }
@@ -916,18 +916,17 @@ footer a {
         gap: 30px;
     }
     .form-group {
-        flex-direction: column; /* التسمية فوق الحقل */
-        align-items: flex-end; /* محاذاة التسمية لليمين */
-        gap: 5px; /* تباعد أقل بين التسمية والحقل */
+        flex-direction: column; 
+        align-items: flex-end; 
+        gap: 5px; 
     }
     
     .form-group label {
-        width: 100%; /* جعل التسمية تأخذ عرضاً كاملاً لكي تكون فوق الحقل */
-        text-align: right; /* محاذاة لليمين */
+        width: 100%; 
+        text-align: right; 
         padding-left: 0;
     }
     
-    /* توسيط زر الإرسال في وضع الموبايل */
     .btn-submit {
         width: 100%; 
         margin-right: 0;
@@ -938,10 +937,7 @@ footer a {
         width: 100%;
     }
 
-    /* .btn-submit {
-        margin-right: 0; 
-        margin-left: 0;
-        width: 100%;  */
+   
         
         
     footer {
@@ -951,15 +947,15 @@ footer a {
     .footer-grid {
         grid-template-columns: 1fr; 
         gap: 30px;
-        text-align: center; /* توسيط المحتوى داخلياً */
+        text-align: center; 
     }
 
     .footer-col {
         padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* فاصل خفيف بين الأقسام */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
     }
     .footer-col:last-child {
-        border-bottom: none; /* إزالة الفاصل من آخر قسم */
+        border-bottom: none; 
     }
     
     .footer-col h3 {
@@ -968,20 +964,17 @@ footer a {
         font-size: 1.6em;
     }
 
-    /* توسيط قوائم الروابط والقوائم النقطية */
     .footer-col ul {
-        width: fit-content; /* لكي يأخذ الـ UL عرض المحتوى فقط */
-        margin: 0 auto; /* توسيط القائمة بالكامل */
-        list-style-type: none; /* التأكيد على إزالة التنقيط الافتراضي */
+        width: fit-content; 
+        margin: 0 auto;
+        list-style-type: none;
         padding-right: 0;
     }
     
-    /* توسيط أيقونات التواصل الاجتماعي */
     .footer-col .social-links {
         justify-content: center; 
     }
     
-    /* توسيط النص في قسم حقوق النشر */
     .copyright {
         text-align: center;
         margin-top: 25px;

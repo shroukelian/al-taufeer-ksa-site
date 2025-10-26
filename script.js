@@ -58,5 +58,4 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearSpan.textContent = new Date().getFullYear();
     }
     
-    /* ملاحظة: لا نحتاج لإضافة خاصية scroll-behavior: smooth هنا في الجافاسكريبت لأننا أضفناها بالفعل في ملف CSS */
 });
