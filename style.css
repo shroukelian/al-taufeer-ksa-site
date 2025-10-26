@@ -5,7 +5,7 @@ body {
     padding: 0;
     direction: rtl;
     text-align: right;
-    background-color: #f4f7f9; /* خلفية فاتحة جداً */
+    background-color: #f4f7f9; 
     color: #333;
     line-height: 1.7;
     transition: background-color 0.3s ease;
@@ -13,7 +13,6 @@ body {
     
 }
 
-/* **السطر السحري لضمان النعومة في الانتقال** */
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -27,7 +26,7 @@ html {
 }
 
 h1, h2, h3, h4 {
-   color: #003F80;; /* أزرق كحلي داكن */
+   color: #003F80;; 
     margin-bottom: 25px;
     font-weight: 700;
 }
@@ -54,7 +53,7 @@ a:hover {
 
 /* Header & Navigation */
 header {
-    background-color: #003366; /* أزرق كحلي داكن */
+    background-color: #003366; 
     color: white;
     padding: 15px 0;
     position: sticky;
@@ -131,7 +130,6 @@ nav ul {
     gap: 10px; 
 }
 
-/* إزالة الشرطة الفاصلة (إن وجدت في كود قديم) */
 nav ul li::after {
     content: none !important; 
 }
@@ -145,7 +143,7 @@ nav ul li a {
     display: block;
     border-radius: 8px;
     font-weight: 600;
-    white-space: nowrap; /* لمنع كسر "اتصل بنا" */
+    white-space: nowrap; 
 }
 nav ul li a:hover, nav ul li.active a {
     background-color: #FFC300; 
@@ -213,7 +211,6 @@ nav ul li a:hover, nav ul li.active a {
 
 /* Hero Section */
 #hero {
-    /* تخفيف الطبقة الزرقاء: تم تغيير الشفافية من 0.7 إلى 0.5 */
     background-image: linear-gradient(rgba(111, 175, 239, 0.35), rgba(0,63,128,0.35)), url('images/OIP.webp'); 
     background-size: cover;
     background-position: center;
@@ -227,7 +224,6 @@ nav ul li a:hover, nav ul li.active a {
 } */
 
 
-/* تعديل الهامش السفلي لزر الـ Hero لرفعه عن الأزرار العائمة */
 #hero .btn {
     margin-bottom: 70px;
 }
@@ -281,9 +277,9 @@ nav ul li a:hover, nav ul li.active a {
 }
 
 .service-card-image {
-    max-width: 100%; /* ضمان عدم تجاوز عرض البطاقة الأب */
+    max-width: 100%; 
     width: 100%; 
-    height: 250px; /* الارتفاع القياسي */
+    height: 250px; 
     object-fit: cover; 
     border-bottom: 1px solid #eee; 
     display: block; 
@@ -299,7 +295,7 @@ nav ul li a:hover, nav ul li.active a {
 /* About Section Styles */
 #about .about-content {
     display: flex;
-    flex-direction: row-reverse; /* الصورة على اليمين والنص على اليسار في RTL */
+    flex-direction: row-reverse; 
     align-items: flex-start;
     margin-bottom: 60px;
     background-color: white;
@@ -314,19 +310,18 @@ nav ul li a:hover, nav ul li.active a {
     object-fit: cover;
     border-radius: 10px;
     margin-right: 40px; 
-    order: 1; /* الصورة ستكون أولاً (على اليمين في row-reverse) */
+    order: 1; 
     flex-shrink: 0;
 }
 #about .about-content div {
     flex: 1;
-    order: 2; /* النص سيكون ثانياً (على اليسار في row-reverse) */
+    order: 2;
 }
 #about .about-content h3 {
     color: #003F80;
     margin-top: 0;
 }
 
-/* ... (باقي التنسيقات المتعلقة بالـ About) ... */
 /* Locations Section */
 #locations .province-item h3 i {
     color: #FFC300;
@@ -346,14 +341,13 @@ nav ul li a:hover, nav ul li.active a {
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     text-align: right; 
     
-    /* تفعيل الـ Flexbox للعرض الأفقي */
+   
     display: flex; 
-    flex-direction: row-reverse; /* الصورة على اليمين والنص على اليسار في RTL */
+    flex-direction: row-reverse; 
     align-items: flex-start;
-    gap: 30px; /* مسافة بين الصورة والمحتوى */
+    gap: 30px;
 }
 #packing-materials .material-item img {
-    /* تحديد حجم الصورة في الديسكتوب */
     width: 40%; 
     max-width: 350px;
     height: 300px;
@@ -363,9 +357,8 @@ nav ul li a:hover, nav ul li.active a {
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
-/* تنسيق الكتلة النصية الجديدة (Content Wrapper) */
 .material-content-wrapper {
-    order: 2; /* النص سيكون على اليمين في RTL */
+    order: 2; 
     flex-grow: 1;
 }
 
@@ -383,7 +376,7 @@ nav ul li a:hover, nav ul li.active a {
 }
 
 .material-content-wrapper ul li {
-    display: block; /* هذا هو التعديل الأساسي */
+    display: block; 
     text-align: right;
     margin-bottom: 10px;
     font-size: 1em;
@@ -400,7 +393,6 @@ nav ul li a:hover, nav ul li.active a {
     top: 5px; 
     font-size: 1.1em;
 }
-/* ... (باقي التنسيقات للقائمة النقطية كما هي) ... */
 
 /* FAQ Section */
 .faq-accordion {
@@ -430,25 +422,23 @@ nav ul li a:hover, nav ul li.active a {
 }
 .faq-question:hover {
     background-color: #ebebeb;
-    color: #003366; /* أزرق كحلي عند التمرير */
+    color: #003366; 
 }
 .faq-question i {
     margin-left: 18px;
-    color: #003366; /* أزرق كحلي */
+    color: #003366; 
     font-size: 1.3em;
     transition: transform 0.3s ease;
 }
 .faq-item.active .faq-question i {
     transform: rotate(180deg);
-    color: #FFC300; /* ذهبي عند الفتح */
+    color: #FFC300; 
 }
-/* هذا هو العنصر الذي يتحكم في فتح وإغلاق الإجابة بنعومة */
 .faq-answer {
-    max-height: 0; /* يجب أن تكون 0 لإخفائها افتراضياً */
+    max-height: 0; 
     overflow: hidden;
     padding: 0 22px;
     background-color: #fff;
-    /* هذا هو المفتاح لإضافة النعومة والحركة */
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
 }
 .faq-item.active .faq-answer {
@@ -463,15 +453,12 @@ nav ul li a:hover, nav ul li.active a {
 
 /* Contact Section */
 #contact .contact-grid {
-    /* ترتيب الأعمدة: معلومات الاتصال على اليمين، النموذج على اليسار */
     display: grid;
     grid-template-columns: 1fr 1.2fr; 
     gap: 60px; 
     margin-top: 50px;
 }
-/* ---------------------------------------------------- */
-/*           معلومات الاتصال (Contact Info)              */
-/* ---------------------------------------------------- */
+/*           (Contact Info)              */
 #contact .contact-info {
     background-color: white;
     padding: 40px;
@@ -485,7 +472,6 @@ nav ul li a:hover, nav ul li.active a {
     color: #003366; 
     text-align: right; 
 }
-/* تنسيق كل سطر في معلومات الاتصال (الهاتف، البريد، الموقع) */
 #contact .contact-info p {
     margin-bottom: 18px;
     font-size: 1.1em;
@@ -500,7 +486,6 @@ nav ul li a:hover, nav ul li.active a {
     flex-shrink: 0; 
 }
 
-/* تنسيق روابط البريد والهاتف داخل معلومات الاتصال */
 #contact .contact-info p a {
     color: #003366; 
     text-decoration: none;
@@ -511,12 +496,10 @@ nav ul li a:hover, nav ul li.active a {
     text-decoration: underline;
 }
 
-/* تنسيق أيقونات التواصل الاجتماعي */
 #contact .social-links-contact {
     margin-top: 30px;
     display: flex;
     gap: 20px; 
-    /* لا نحتاج لتغيير المحاذاة هنا، ستتبع محاذاة الأب (text-align: right) */
 }
 #contact .social-links-contact a {
     font-size: 2em; 
@@ -529,9 +512,7 @@ nav ul li a:hover, nav ul li.active a {
     transform: translateY(-5px);
 }
 
-/* ---------------------------------------------------- */
-/*             نموذج الاتصال (Contact Form)              */
-/* ---------------------------------------------------- */
+/*            (Contact Form)              */
 #contact .contact-form {
     background-color: white;
     padding: 40px;
@@ -543,7 +524,7 @@ nav ul li a:hover, nav ul li.active a {
     font-size: 2em;
     margin-bottom: 30px;
     color: #003366;
-    text-align: center; /* توسيط عنوان النموذج */
+    text-align: center;
 }
 
 #contact .contact-form form {
@@ -551,7 +532,6 @@ nav ul li a:hover, nav ul li.active a {
     flex-direction: column; 
 }
 
-/* تنسيق مجموعات الحقول (Label + Input) في سطر واحد (Desktop) */
 .form-group {
     display: flex; 
     flex-direction: row; 
@@ -562,7 +542,7 @@ nav ul li a:hover, nav ul li.active a {
 
 .form-group label {
     flex-shrink: 0; 
-    width: 100px; /* عرض ثابت للتسمية (الاسم، رقم الهاتف) */
+    width: 100px; 
     text-align: right;
     text-align: left; 
     padding-left: 10px; 
@@ -593,13 +573,12 @@ nav ul li a:hover, nav ul li.active a {
     min-height: 120px;
 }
 
-/* تنسيق زر الإرسال */
 .btn-submit {
     margin-top: 10px;
     background-color: #003366;
     color: white;
     width: fit-content;
-    margin-right: auto; /* دفع الزر إلى أقصى اليسار */
+    margin-right: auto; 
     margin-left: 0;
     padding: 14px 30px;
 }
@@ -622,21 +601,20 @@ footer a {
 }
 .footer-grid {
     display: grid;
-    /* التعديل هنا: استخدام 3 أعمدة متجاوبة للديسكتوب */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 40px; 
     margin-bottom: 40px;
-    text-align: right; /* محاذاة كل النص لليمين افتراضياً */
+    text-align: right; 
 }
 .footer-col .social-links {
-    margin-top: 15px; /* زيادة التباعد بين النص وأيقونات السوشيال ميديا */
+    margin-top: 15px;
     display: flex;
-    gap: 18px; /* تباعد أكبر بين الأيقونات */
-    padding-top: 10px; /* تباعد علوي لإضافة فاصل بصري */
+    gap: 18px; 
+    padding-top: 10px; 
 }
 
 .footer-col .social-links a {
-    font-size: 2.2em; /* زيادة حجم الأيقونات */
+    font-size: 2.2em; 
     color: white;
     transition: color 0.3s ease, transform 0.2s ease;
 }
@@ -645,21 +623,19 @@ footer a {
     color: #FFC300;
     transform: translateY(-4px);
 }
-/* تنسيق القوائم النقطية للروابط */
 .footer-col ul {
-    list-style: none; /* إزالة التنقيط الافتراضي */
+    list-style: none; 
     padding: 0;
 }
-/* إضافة تنقيط مخصص (دائرة ذهبية) */
 .footer-col ul li {
     margin-bottom: 12px;
-    padding-right: 15px; /* مسافة للرمز النقطي */
+    padding-right: 15px; 
     position: relative;
 }
 
 .footer-col ul li::before {
-    content: "\2022"; /* رمز النقطة (Bullet Point) */
-    color: #FFC300; /* لون ذهبي */
+    content: "\2022"; 
+    color: #FFC300; 
     font-size: 1.2em;
     font-weight: 900;
     position: absolute;
@@ -717,7 +693,6 @@ footer a {
 
 /* Responsive Design (Media Queries) */
 @media (max-width: 992px) {
-    /* إظهار زر الهامبرغر في وضع الجوال */
     .hamburger-menu {
         display: flex;
         order: 3; 
@@ -730,7 +705,6 @@ footer a {
         margin-right: 15px; 
     }
 
-    /* اللوجو والعنوان النصي بجوار بعضهما أفقياً على الموبايل */
     .logo a {
         display: flex !important;
         flex-direction: row !important;
@@ -745,7 +719,6 @@ footer a {
         white-space: nowrap;
     }
 
-    /* إخفاء القائمة في وضع الجوال افتراضياً */
     .main-nav-wrapper {
         flex-direction: column; 
         width: 100%;
@@ -790,7 +763,7 @@ footer a {
     /* --- Hero Section Mobile Adjustments --- */
     #hero {
         background-size: cover;
-        background-position: 80% center; /* تعديل موضع الخلفية لإظهار الشاحنة بشكل أفضل */
+        background-position: 80% center;
     }
 
     #hero h1 {
@@ -803,13 +776,11 @@ footer a {
     #hero .btn {
         margin-bottom: 50px; 
     }
-    /* إصلاح ظهور القائمة الجانبية */
     .main-nav-wrapper {
         flex-direction: column; 
-        width: 100%; /* تأخذ العرض الكامل */
+        width: 100%; 
         position: absolute; 
         top: 95px; 
-        /* موضع الإخفاء الافتراضي: خارج الشاشة على اليسار (في RTL) */
         right: 0; 
         
         background-color: #003366; 
@@ -837,7 +808,7 @@ footer a {
     }
     /* --- About Section Mobile Fix --- */
     #about .about-content {
-        flex-direction: column; /* التكديس العمودي */
+        flex-direction: column; 
         align-items: center; 
         padding: 30px; 
     }
@@ -846,37 +817,34 @@ footer a {
         height: 250px; 
         margin-right: 0; 
         margin-bottom: 20px; 
-        /* تعديل الترتيب: الصورة تأتي أولاً */
         order: 1; 
     }
     #about .about-content div {
-        /* تعديل الترتيب: النص يأتي ثانياً */
         order: 2; 
         width: 100%;
         text-align: right;
         padding-bottom: 10px;
     }
-    /* --- Packing Materials Section Mobile Fix --- */
+    /* --- Packing Materials  --- */
     #packing-materials .material-item {
-        flex-direction: column; /* التكديس العمودي (الصورة فوق النص) */
+        flex-direction: column; 
         align-items: center; 
         text-align: center;
-        padding: 20px; /* تقليل البادينغ الداخلي للبطاقة */
+        padding: 20px; 
     }
     #packing-materials .material-item img {
-        width: calc(100% + 40px); /* زيادة العرض ليتجاوز البادينغ الداخلي للبطاقة */
-        max-width: none; /* إزالة الحد الأقصى للعرض */
+        width: calc(100% + 40px); 
+        max-width: none; 
         height: 250px; 
         object-fit: cover; 
         order: 1; 
         margin-bottom: 20px;
-        /* هذا هو التعديل الأساسي لملء البطاقة */
         margin-left: -20px; 
         margin-right: -20px;
     }
     .material-content-wrapper {
-        order: 2; /* النص ثانياً */
-        padding: 0; /* إزالة أي بادينغ داخلي غير مرغوب فيه */
+        order: 2; 
+        padding: 0; 
     }
     .material-content-wrapper ul {
     list-style: none;
@@ -886,7 +854,7 @@ footer a {
 }
 
 .material-content-wrapper ul li {
-    display: block; /* هذا هو التعديل الأساسي */
+    display: block; 
     text-align: right;
     margin-bottom: 10px;
     font-size: 1em;
@@ -907,14 +875,14 @@ footer a {
 @media (max-width: 576px) {
     /* --- Hero Section Mobile Adjustments --- */
     .container {
-        padding: 0 15px; /* تباعد أقل قليلاً في الشاشات الصغيرة جداً */
+        padding: 0 15px;
     }
     h1 { 
         font-size: 2.2em;
         line-height: 1.2;
     }
     .fixed-contact-buttons {
-        bottom: 15px; /* رفع الأزرار قليلاً عن حافة الشاشة */
+        bottom: 15px;
         left: 15px;
     }
     #hero p {
@@ -927,7 +895,6 @@ footer a {
         font-size: 1em;
     }
     
-    /* تنسيق الهيدر في أصغر الشاشات */
     .logo a {
         flex-direction: row !important; 
         align-items: center !important;
@@ -945,11 +912,11 @@ footer a {
         font-size: 0.85em;
     }
      #contact .contact-grid {
-        grid-template-columns: 1fr; /* عمود واحد فقط */
+        grid-template-columns: 1fr; 
         gap: 30px;
     }
     .form-group {
-        flex-direction: column-reverse; /* التسمية فوق الحقل */
+        flex-direction: column; /* التسمية فوق الحقل */
         align-items: flex-end; /* محاذاة التسمية لليمين */
         gap: 5px; /* تباعد أقل بين التسمية والحقل */
     }
@@ -960,28 +927,30 @@ footer a {
         padding-left: 0;
     }
     
+    /* توسيط زر الإرسال في وضع الموبايل */
+    .btn-submit {
+        width: 100%; 
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
     .form-group input, .form-group textarea {
-        width: 100%; /* الحقول تأخذ عرضاً كاملاً */
+        width: 100%;
     }
 
-    .btn-submit {
-        margin-right: 0; /* إلغاء الدفع لليسار (جعله توسيطاً أو محاذاة لليمين) */
+    /* .btn-submit {
+        margin-right: 0; 
         margin-left: 0;
-        width: 100%; /* جعل الزر يأخذ عرضاً كاملاً في الموبايل */
-        /* يمكن تغيير width: 100%; إلى width: fit-content; وإضافة margin: 0 auto; لتوسيعه */
+        width: 100%;  */
         
-        /* مثال للتوسيط: */
-        /* display: block; 
-        width: fit-content;
-        margin: 0 auto; */
-         /* --- تعديلات الفوتر في وضع الموبايل --- */
+        
     footer {
         padding: 40px 0 20px 0;
     }
     
     .footer-grid {
-        grid-template-columns: 1fr; /* عمود واحد فقط */
-        gap: 30px; /* تباعد بين الأقسام */
+        grid-template-columns: 1fr; 
+        gap: 30px;
         text-align: center; /* توسيط المحتوى داخلياً */
     }
 
@@ -1018,4 +987,3 @@ footer a {
         margin-top: 25px;
     }
     }
-}
