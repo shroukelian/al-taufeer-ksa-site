@@ -1099,11 +1099,14 @@ footer a {
 .article-meta {
     text-align: center;
     margin-bottom: 40px; 
-    padding: 30px 20px; /* زيادة البادينغ */
+    /* إضافة هامش علوي لإنزال البطاقة عن الهيدر المثبت */
+    margin-top: 40px; 
+    padding: 30px 20px; 
     background-color: white; 
     border-radius: 12px;
-    border-bottom: 4px solid #FFC300; /* خط ذهبي أسفل الهيدر */
+    border-bottom: 4px solid #FFC300; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    position: relative; /* لضمان عمل الـ margin-top بشكل صحيح */
 }
 .article-meta h1 {
     font-size: 2.5em; /* تصغير حجم العنوان في صفحة المقالة */
