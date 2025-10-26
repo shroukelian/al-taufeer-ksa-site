@@ -44,7 +44,7 @@ p { margin-bottom: 20px; }
     line-height: 1.8;
 }
 a {
-    color: #FFC300; /* ذهبي/أصفر للروابط */
+    color: #FFC300; 
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease, background-color 0.3s ease;
 }
@@ -277,6 +277,7 @@ nav ul li a:hover, nav ul li.active a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e0e0e0;
     overflow: hidden;
+    padding: 10px;
 }
 
 .service-card-image {
@@ -295,29 +296,111 @@ nav ul li a:hover, nav ul li.active a {
     color: #FFC300;
 }
 
-/* About Section */
+/* About Section Styles */
+#about .about-content {
+    display: flex;
+    flex-direction: row-reverse; /* الصورة على اليمين والنص على اليسار في RTL */
+    align-items: flex-start;
+    margin-bottom: 60px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+#about .about-image {
+    width: 45%; 
+    max-width: 500px;
+    height: 350px; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 40px; 
+    order: 1; /* الصورة ستكون أولاً (على اليمين في row-reverse) */
+    flex-shrink: 0;
+}
+#about .about-content div {
+    flex: 1;
+    order: 2; /* النص سيكون ثانياً (على اليسار في row-reverse) */
+}
 #about .about-content h3 {
-    color: #003366;
-}
-.vision-mission-grid .item .icon-large {
-    color: #FFC300;
-}
-.values-grid .value-item .icon-small {
-    color: #003366;
+    color: #003F80;
+    margin-top: 0;
 }
 
+/* ... (باقي التنسيقات المتعلقة بالـ About) ... */
 /* Locations Section */
 #locations .province-item h3 i {
     color: #FFC300;
 }
 
 /* Packing Materials Section */
-#packing-materials .material-item ul li i {
+#packing-materials .materials-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 40px; 
+    margin-top: 50px;
+}
+#packing-materials .material-item {
+    background-color: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: right; 
+    
+    /* تفعيل الـ Flexbox للعرض الأفقي */
+    display: flex; 
+    flex-direction: row-reverse; /* الصورة على اليمين والنص على اليسار في RTL */
+    align-items: flex-start;
+    gap: 30px; /* مسافة بين الصورة والمحتوى */
+}
+#packing-materials .material-item img {
+    /* تحديد حجم الصورة في الديسكتوب */
+    width: 40%; 
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover; 
+    margin-bottom: 0; 
+    flex-shrink: 0; 
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+/* تنسيق الكتلة النصية الجديدة (Content Wrapper) */
+.material-content-wrapper {
+    order: 2; /* النص سيكون على اليمين في RTL */
+    flex-grow: 1;
+}
+
+#packing-materials .material-item h3 {
+    font-size: 1.8em;
+    color: #003F80;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.material-content-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.material-content-wrapper ul li {
+    display: block; /* هذا هو التعديل الأساسي */
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #444;
+    padding-right: 25px; 
+    position: relative;
+    line-height: 1.4;
+}
+
+.material-content-wrapper ul li i {
     color: #FFC300;
+    position: absolute;
+    right: 0; 
+    top: 5px; 
+    font-size: 1.1em;
 }
-.discount-offer {
-    color: #003366; 
-}
+/* ... (باقي التنسيقات للقائمة النقطية كما هي) ... */
 
 /* FAQ Section */
 .faq-accordion {
@@ -537,6 +620,14 @@ footer h3 {
 footer a {
     color: #FFC300; 
 }
+.footer-grid {
+    display: grid;
+    /* التعديل هنا: استخدام 3 أعمدة متجاوبة للديسكتوب */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 40px; 
+    margin-bottom: 40px;
+    text-align: right; /* محاذاة كل النص لليمين افتراضياً */
+}
 .footer-col .social-links {
     margin-top: 15px; /* زيادة التباعد بين النص وأيقونات السوشيال ميديا */
     display: flex;
@@ -574,6 +665,12 @@ footer a {
     position: absolute;
     right: 0;
     top: 0;
+}
+.footer-note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #c9d0d6;
+    margin-top: 15px;
 }
 
 
@@ -738,6 +835,74 @@ footer a {
     .contact-header {
         margin-right: 10px;
     }
+    /* --- About Section Mobile Fix --- */
+    #about .about-content {
+        flex-direction: column; /* التكديس العمودي */
+        align-items: center; 
+        padding: 30px; 
+    }
+    #about .about-image {
+        width: 100%; 
+        height: 250px; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+        /* تعديل الترتيب: الصورة تأتي أولاً */
+        order: 1; 
+    }
+    #about .about-content div {
+        /* تعديل الترتيب: النص يأتي ثانياً */
+        order: 2; 
+        width: 100%;
+        text-align: right;
+        padding-bottom: 10px;
+    }
+    /* --- Packing Materials Section Mobile Fix --- */
+    #packing-materials .material-item {
+        flex-direction: column; /* التكديس العمودي (الصورة فوق النص) */
+        align-items: center; 
+        text-align: center;
+        padding: 20px; /* تقليل البادينغ الداخلي للبطاقة */
+    }
+    #packing-materials .material-item img {
+        width: calc(100% + 40px); /* زيادة العرض ليتجاوز البادينغ الداخلي للبطاقة */
+        max-width: none; /* إزالة الحد الأقصى للعرض */
+        height: 250px; 
+        object-fit: cover; 
+        order: 1; 
+        margin-bottom: 20px;
+        /* هذا هو التعديل الأساسي لملء البطاقة */
+        margin-left: -20px; 
+        margin-right: -20px;
+    }
+    .material-content-wrapper {
+        order: 2; /* النص ثانياً */
+        padding: 0; /* إزالة أي بادينغ داخلي غير مرغوب فيه */
+    }
+    .material-content-wrapper ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: right;
+}
+
+.material-content-wrapper ul li {
+    display: block; /* هذا هو التعديل الأساسي */
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #444;
+    padding-right: 25px; 
+    position: relative;
+    line-height: 1.4;
+}
+
+.material-content-wrapper ul li i {
+    color: #FFC300;
+    position: absolute;
+    right: 0; 
+    top: 5px; 
+    font-size: 1.1em;
+}
 }
 @media (max-width: 576px) {
     /* --- Hero Section Mobile Adjustments --- */
