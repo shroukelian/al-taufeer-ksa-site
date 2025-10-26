@@ -50,14 +50,21 @@ a {
 a:hover {
     text-decoration: underline;
 }
+main {
+    padding-top: 90px; /* قم بتعديل القيمة حسب ارتفاع الهيدر (تقريباً 90 بكسل) */
+}
+
 
 /* Header & Navigation */
 header {
     background-color: #003366; 
     color: white;
     padding: 15px 0;
-    position: sticky;
-    top: 0;
+     position: fixed; 
+    width: 100%; /* يجب تحديد العرض الكامل مع Fixed */
+    left: 0;
+    right: 0;
+    top: 0; 
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -980,3 +987,225 @@ footer a {
         margin-top: 25px;
     }
     }
+
+    /* Blog Page Specific Styles (NEW) */
+#blog-header {
+    background-color: #f9fbff; /* لون الخلفية الفاتح جداً */
+    padding: 80px 0 40px 0; 
+}
+#blog-header h1 {
+    color: #003F80;
+    font-size: 3em;
+    margin-bottom: 15px;
+    
+}
+#blog-posts {
+    padding: 80px 0;
+}
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+.post-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+.post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.post-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.post-content {
+    padding: 25px;
+}
+.post-content h3 {
+    font-size: 1.6em;
+    color: #003F80;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+.post-content p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.post-date {
+    display: block;
+    color: #FFC300; /* ذهبي لتاريخ النشر */
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.post-date i {
+    margin-left: 8px;
+}
+.read-more-btn {
+    display: inline-block;
+    color: #003F80; /* أزرق داكن لزر المزيد */
+    font-weight: 700;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+.read-more-btn:hover {
+    color: #FFC300; /* ذهبي عند التمرير */
+    text-decoration: none;
+}
+.read-more-btn i {
+    margin-right: 5px;
+    transition: margin-right 0.3s ease;
+}
+
+/* Pagination Styles */
+.pagination {
+    text-align: center;
+    margin-top: 60px;
+}
+.pagination a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.pagination a:hover {
+    background-color: #f0f0f0;
+    border-color: #FFC300;
+}
+.pagination .active {
+    background-color: #FFC300;
+    color: #003F80;
+    border-color: #FFC300;
+}
+
+/* Article Page Styles */
+.article-meta {
+    text-align: center;
+    margin-bottom: 40px; 
+    padding: 30px 20px; /* زيادة البادينغ */
+    background-color: white; 
+    border-radius: 12px;
+    border-bottom: 4px solid #FFC300; /* خط ذهبي أسفل الهيدر */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+.article-meta h1 {
+    font-size: 2.5em; /* تصغير حجم العنوان في صفحة المقالة */
+    margin-bottom: 15px;
+    color: #003F80;
+}
+.article-meta span {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1em;
+    color: #555;
+}
+.article-meta i {
+    color: #FFC300; /* ذهبي للأيقونات */
+    margin-left: 8px;
+}
+.article-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0; 
+    text-align: right;
+}
+.article-content h3 {
+    font-size: 1.8em;
+    color: #003F80;
+    margin-top: 40px;
+}
+.article-content p {
+    font-size: 1.15em;
+    line-height: 1.8;
+}
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px; /* لتصغير حجم الصورة في المقال */
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 25px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.article-list {
+    list-style: none;
+    padding: 0;
+}
+.article-list li {
+    font-size: 1.15em;
+    color: #333;
+    margin-bottom: 15px;
+    padding-right: 30px;
+    position: relative;
+    line-height: 1.8;
+}
+.article-list li::before {
+    content: "\f058"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #FFC300; /* ذهبي لعلامة الصح */
+    position: absolute;
+    right: 0;
+    font-size: 1.2em;
+}
+
+/* تعديلات الموبايل لصفحة المقالة */
+@media (max-width: 576px) {
+     #blog-header {
+        padding: 50px 0 20px 0; /* تقليل التباعد في الأعلى والأسفل */
+    }
+    #blog-header h1 {
+        font-size: 2.2em; /* تصغير عنوان المدونة */
+        margin-bottom: 16px;
+        /* background-color: #a6c90b; */
+    }
+    #blog-header p{
+        margin-top: 20px;
+    }
+    .section-description {
+        font-size: 1em; /* تصغير وصف المدونة */
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr; /* عمود واحد */
+        gap: 25px;
+    }
+    
+    .post-card {
+        padding: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .post-image {
+        height: 180px; /* تصغير ارتفاع الصورة */
+    }
+    
+    .post-content {
+        padding: 15px; /* تباعد داخلي أقل للمحتوى */
+    }
+    .article-meta h1 {
+        font-size: 1.8em;
+    }
+    .article-meta span {
+        display: block;
+        margin: 5px 0;
+    }
+    .article-content p, .article-list li {
+        font-size: 1em;
+    }
+    .article-content img {
+        height: 200px;
+    }
+}
